@@ -4,10 +4,21 @@
 <head>
     <meta charset="UTF-8">
     <title>Svg</title>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/svg.js/2.6.3/svg.min.js"></script>
 </head>
 
 <body>
-
+    <div id="drawing" style="width: 1000px; height: 1000px">
+    </div>
+    <script>
+        (function () {
+            var draw = SVG('drawing').size('100%', '100%');
+            var rect = draw.rect(20,20);
+            rect.animate().fill('#f03').move(100,100);
+            rect.animate().move(200, 0);
+        })()
+    </script>
 </body>
 
 </html>
